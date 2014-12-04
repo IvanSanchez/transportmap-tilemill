@@ -6,7 +6,7 @@
   ::city{
     [type='city'][zoom<12] {
       text-size: 15;
-      text-face-name: 'DejaVu Sans Book';
+      text-face-name: @typeface;
       text-halo-fill: @land;
       text-fill: @text;
       text-halo-radius: 2;
@@ -15,7 +15,7 @@
     }
     [type='city'][zoom>=12] {
       text-size: 15;
-      text-face-name: 'DejaVu Sans Book';
+      text-face-name: @typeface;
       text-halo-fill: @land;
       text-fill: @text;
       text-halo-radius: 2;
@@ -29,7 +29,7 @@
   ::town{
     [type='town'][zoom>8] {
       text-size: 12;
-      text-face-name: 'DejaVu Sans Book';
+      text-face-name: @typeface;
       text-halo-fill: @land;
       text-fill: @text;
       text-halo-radius: 2;
@@ -41,7 +41,7 @@
   ::village{
     [type='village'][zoom>9] {
       text-size: 12;
-      text-face-name: 'DejaVu Sans Book';
+      text-face-name: @typeface;
       text-halo-fill: @land;
       text-fill: @text;
       text-halo-radius: 2;
@@ -52,7 +52,7 @@
   ::suburb{
     [type='suburb'][zoom>10][zoom<=12] {
       text-size: 12;
-      text-face-name: 'DejaVu Sans Book';
+      text-face-name: @typeface;
       text-halo-fill: @land;
       text-fill: @text;
       text-halo-radius: 2;
@@ -61,7 +61,7 @@
     }
     [type='suburb'][zoom>12] {
       text-size: 15;
-      text-face-name: 'DejaVu Sans Book';
+      text-face-name: @typeface;
       text-halo-fill: @land;
       text-fill: @text;
       text-halo-radius: 2;
@@ -74,7 +74,7 @@
   ::hamlet{
     [type='hamlet'][zoom>11] {
       text-size: 12;
-      text-face-name: 'DejaVu Sans Book';
+      text-face-name: @typeface;
       text-halo-fill: @land;
       text-fill: @text;
       text-halo-radius: 2;
@@ -85,7 +85,7 @@
   ::locality{
     [type='locality'][zoom>11] {
       text-size: 12;
-      text-face-name: 'DejaVu Sans Book';
+      text-face-name: @typeface;
       text-halo-fill: @land;
       text-fill: @text;
       text-halo-radius: 2;
