@@ -608,6 +608,33 @@
       "name": "railwaysgen1"
     },
     {
+      "geometry": "linestring",
+      "extent": [
+        -4.241793402967201,
+        39.896659446539246,
+        -3.246555053891027,
+        40.923799570550884
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "osm_new_aeroways",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-472194.281668576,4850936.45602523,-361404.855431478,5001108.60664353",
+        "host": "localhost",
+        "user": "osm",
+        "password": "osm",
+        "dbname": "osm"
+      },
+      "id": "aeroways",
+      "class": "aeroways detail",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "aeroways"
+    },
+    {
       "geometry": "point",
       "extent": [
         -4.292949400000015,
@@ -744,6 +771,36 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "mainroadlabelsgen1"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -4.2494633,
+        39.8131062999999,
+        -3.103295100000009,
+        41.0151456
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "osm_new_aeropoints",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-473048.090700704,4838820.44852871,-345457.230313262,5014575.89312512",
+        "host": "localhost",
+        "user": "osm",
+        "password": "osm",
+        "dbname": "osm",
+        "id": "aeropoints",
+        "project": "transportmap-carto",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "aeropoints",
+      "class": "aeropoints",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "aeropoints"
     }
   ],
   "scale": 1,

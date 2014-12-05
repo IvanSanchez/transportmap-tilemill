@@ -249,32 +249,59 @@ aeroways = LineStrings(
 transport_buildings = Polygons(
     name = 'transport_buildings',
     mapping = {
-			'railway': (
-					'station',
-			),
-			'amenity': (
-					'bus_station',
-			),
-			'building': (
-					'train_station',
-			),
-			'aeroway': (
-					'terminal',
-			),
+      'railway': (
+          'station',
+      ),
+      'amenity': (
+          'bus_station',
+      ),
+      'building': (
+          'train_station',
+      ),
+      'aeroway': (
+          'terminal',
+          'hangar',
+      ),
 })
 
 transport_areas = Polygons(
-    name = 'transport_areas',
-    mapping = {
-        'landuse': (
-            'railway',
-        ),
-        'aeroway': (
-            'aerodrome',
-            'helipad',
-            'apron',
-        ),
+  name = 'transport_areas',
+  mapping = {
+    'landuse': (
+      'railway',
+    ),
+  'aeroway': (
+      'aerodrome',
+      'helipad',
+      'apron',
+    ),
 })
+
+
+aeroways = LineStrings(
+    name = 'aeroways',
+    mapping = {
+      'aeroway': (
+        'taxiway',
+        'runway'
+      ),
+})
+    
+aeropoints = Points(
+    name = 'aeropoints',
+    fields = (
+      ('ref', String()),
+      ('name', String()),
+    ),
+    mapping = {
+      'aeroway': (
+        'parking_position',
+        'gate',
+        'helipad',
+        'navigationaid'
+      ),
+})
+    
 
 landusages = Polygons(
     name = 'landusages',

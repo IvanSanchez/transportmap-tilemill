@@ -9,6 +9,7 @@
 @roadborder:   hsl(0,0,70%);
 @railway:      hsl(0,0,20%);
 @railwaytunnel:hsl(0,0,60%);
+@aeroway:      hsl(0,5%,82.5%);
 
 @building:            hsl(0,0,90%);
 @buildingborder:      hsl(0,0,75%);
@@ -149,7 +150,7 @@ Map {
 
 
 // Train stations, airport terminals, bus stations/depots
-#transportbuildings {
+#transportbuildings[zoom>=14] {
   line-color:@transportbuildingborder;
   line-width:0.5;
   polygon-opacity:1;
@@ -162,4 +163,70 @@ Map {
   line-width:0.5;
   polygon-opacity:1;
   polygon-fill:@transportarea;
+}
+
+
+#aeropoints[zoom>=16] {
+  [type='gate']{
+    text-size: 10;
+    text-face-name: @typeface;
+    text-halo-fill: @land;
+    text-fill: @text;
+    text-halo-radius: 1;
+    text-name: 'Gate ' + [ref];
+    text-margin:2;
+  }  
+  [type='parking_position']{
+    text-size: 10;
+    text-face-name: @typeface; 
+    text-halo-fill: @land;
+    text-fill: lighten(@text,33%);
+    text-halo-radius: 1;
+    text-name: [ref];
+    text-margin:10;
+  }  
+  /*
+  [type='helipad']{
+    text-size: 12;
+    text-face-name: @typeface;
+    text-halo-fill: @land;
+    text-fill: @text;
+    text-halo-radius: 1;
+    text-name: [ref];
+    text-margin:2;
+  }  
+  [type='navigationaid']{
+    text-size: 12;
+    text-face-name: @typeface;
+    text-halo-fill: @land;
+    text-fill: @text;
+    text-halo-radius: 1;
+    text-name: [name];
+    text-margin:2;
+  }
+  */
+}
+
+
+#aeroways[type='runway'][zoom>6] {
+  line-color:@aeroway;
+  line-width:10;
+  [zoom<12]{ line-width:0.5; }
+  [zoom=12]{ line-width:2; }
+  [zoom=13] { line-width:3; }
+  [zoom=14] { line-width:4; }
+  [zoom=15] { line-width:8; }
+  [zoom=16] { line-width:12; }
+  [zoom>16] { line-width:20; }
+}
+
+#aeroways[type='taxiway'][zoom>=12] {
+  line-color:@aeroway;
+  line-width:10;
+  [zoom=12] { line-width:0.1; }
+  [zoom=13] { line-width:0.25; }
+  [zoom=14] { line-width:0.5; }
+  [zoom=15] { line-width:1; }
+  [zoom=16] { line-width:2; }
+  [zoom>16] { line-width:4; }
 }
