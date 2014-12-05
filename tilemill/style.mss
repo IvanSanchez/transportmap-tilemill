@@ -1,13 +1,23 @@
-@land: #ececec;
-@text: #606060;
-@water: #9fd1eb;
-@waterborder: #85c5d3;
-@road: #ccc;
-@roadborder: #bbb;
-@railway: #000;
-@railwaytunnel:#a0a0a0;
-@typeface: 'Droid Sans Regular';
-@green: #D2F2D7;
+@land:         hsl(0,0,92%);
+@text:         hsl(0,0,35%);
+@water:        hsl(190,35%,85%);
+@waterborder:  hsl(190,35%,82%);
+@green:        hsl(90,30%,85%);
+@greenborder:  hsl(90,30%,82%);
+
+@road:         hsl(0,0,85%);
+@roadborder:   hsl(0,0,70%);
+@railway:      hsl(0,0,20%);
+@railwaytunnel:hsl(0,0,60%);
+
+@building:            hsl(0,0,90%);
+@buildingborder:      hsl(0,0,75%);
+@transportarea:       hsl(0,15%,92%);
+@transportareaborder: hsl(0,15%,85%);
+@transportbuilding:       hsl(0,30%,90%);
+@transportbuildingborder: hsl(0,30%,75%);
+
+@typeface: 'DejaVu Sans Book';
 
 
 Map {
@@ -42,6 +52,11 @@ Map {
     [type="garden"] {
       polygon-opacity:1;
       polygon-fill:@green;
+      ::outline {
+        line-color: @greenborder;
+        line-width: 1;
+        line-join: round;
+      }
       }
   }
   
@@ -126,9 +141,25 @@ Map {
 }
   
 #buildings[zoom>=14] {
-  line-color:#c0c0c0;
+  line-color:@buildingborder;
   line-width:0.5;
   polygon-opacity:1;
-  polygon-fill:#e6e6e6;
+  polygon-fill:@building;
 }
 
+
+// Train stations, airport terminals, bus stations/depots
+#transportbuildings {
+  line-color:@transportbuildingborder;
+  line-width:0.5;
+  polygon-opacity:1;
+  polygon-fill:@transportbuilding;
+}
+
+// Railyards, airports
+#transportareas {
+  line-color:@transportareaborder;
+  line-width:0.5;
+  polygon-opacity:1;
+  polygon-fill:@transportarea;
+}

@@ -1,14 +1,14 @@
 {
   "bounds": [
-    -180,
-    -85.05112877980659,
-    180,
-    85.05112877980659
+    -4.1116,
+    39.9982,
+    -3.2108,
+    40.7764
   ],
   "center": [
-    0,
-    0,
-    2
+    -3.6969,
+    40.4135,
+    9
   ],
   "format": "png8",
   "interactivity": false,
@@ -30,6 +30,33 @@
         "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-countries.zip",
         "type": "shape"
       }
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -4.248299268572435,
+        39.838693389314436,
+        -3.086809306629915,
+        40.93626195182737
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "osm_new_transport_areas",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-472918.51131492,4842529.25546039,-343622.04018998,5002944.85711197",
+        "host": "localhost",
+        "user": "osm",
+        "password": "osm",
+        "dbname": "osm"
+      },
+      "id": "transportareas",
+      "class": "transportareas",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "transportareas"
     },
     {
       "geometry": "polygon",
@@ -195,6 +222,60 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "waterareasgen1"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -4.292935417542344,
+        39.800141999134276,
+        -3.060541763188612,
+        41.02784606248146
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "osm_new_buildings",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-477887.384689223,4836941.82121,-340697.950629704,5016449.8197325",
+        "host": "localhost",
+        "user": "osm",
+        "password": "osm",
+        "dbname": "osm"
+      },
+      "id": "buildings",
+      "class": "buildings detail",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "buildings"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -4.248299268572435,
+        39.838693389314436,
+        -3.086809306629915,
+        40.93626195182737
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "osm_new_transport_buildings",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-472918.51131492,4842529.25546039,-343622.04018998,5002944.85711197",
+        "host": "localhost",
+        "user": "osm",
+        "password": "osm",
+        "dbname": "osm"
+      },
+      "id": "transportbuildings",
+      "class": "transportbuildings",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "transportbuildings"
     },
     {
       "geometry": "linestring",
@@ -527,33 +608,6 @@
       "name": "railwaysgen1"
     },
     {
-      "geometry": "polygon",
-      "extent": [
-        -4.292935417542344,
-        39.800141999134276,
-        -3.060541763188612,
-        41.02784606248146
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "osm_new_buildings",
-        "key_field": "",
-        "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "-477887.384689223,4836941.82121,-340697.950629704,5016449.8197325",
-        "host": "localhost",
-        "user": "osm",
-        "password": "osm",
-        "dbname": "osm"
-      },
-      "id": "buildings",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "buildings"
-    },
-    {
       "geometry": "point",
       "extent": [
         -4.292949400000015,
@@ -609,10 +663,92 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "motorwayslabels"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -4.292969615707264,
+        39.80012213402376,
+        -3.0570320088727616,
+        41.02997095875495
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "osm_new_mainroads",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-477891.191611528,4836938.94287386,-340307.246566454,5016763.37901402",
+        "host": "localhost",
+        "user": "osm",
+        "password": "osm",
+        "dbname": "osm"
+      },
+      "id": "mainroadlabels",
+      "class": "mainroadlabels detail",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "mainroadlabels"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -4.292969615707264,
+        39.800138646372986,
+        -3.0570320088727616,
+        41.02997095875495
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "osm_new_mainroads_gen0",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-477891.191611528,4836941.33541481,-340307.246566454,5016763.37901402",
+        "host": "localhost",
+        "user": "osm",
+        "password": "osm",
+        "dbname": "osm"
+      },
+      "id": "mainroadlabelsgen0",
+      "class": "mainroadlabels gen0",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "mainroadlabelsgen0"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -4.292969615707264,
+        39.800138646372986,
+        -3.0570320088727616,
+        41.02997095875495
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "osm_new_mainroads_gen1",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-477891.191611528,4836941.33541481,-340307.246566454,5016763.37901402",
+        "host": "localhost",
+        "user": "osm",
+        "password": "osm",
+        "dbname": "osm"
+      },
+      "id": "mainroadlabelsgen1",
+      "class": "mainroadlabels gen1",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "mainroadlabelsgen1"
     }
   ],
   "scale": 1,
   "metatile": 2,
   "name": "",
-  "description": ""
+  "description": "",
+  "attribution": ""
 }

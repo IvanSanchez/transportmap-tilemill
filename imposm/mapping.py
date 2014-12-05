@@ -245,15 +245,32 @@ aeroways = LineStrings(
     )}
 )
 
+
+transport_buildings = Polygons(
+    name = 'transport_buildings',
+    mapping = {
+			'railway': (
+					'station',
+			),
+			'amenity': (
+					'bus_station',
+			),
+			'building': (
+					'train_station',
+			),
+			'aeroway': (
+					'terminal',
+			),
+})
+
 transport_areas = Polygons(
     name = 'transport_areas',
     mapping = {
-        'railway': (
-            'station',
+        'landuse': (
+            'railway',
         ),
         'aeroway': (
             'aerodrome',
-            'terminal',
             'helipad',
             'apron',
         ),
